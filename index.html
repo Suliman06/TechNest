@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechNest - Your Tech Accessories Hub</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+  <header>
+    <h1>TechNest</h1>
+    <nav class="nav-wrapper">
+      <div class="search-bar">
+        <input type="text" placeholder="Search for products...">
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="shop-item">
+          <a href="#">Shop</a>
+          <ul class="shop-dropdown">
+            <li><a href="#">Phone Accessories</a></li>
+            <li><a href="#">Laptop Accessories</a></li>
+            <li><a href="#">Audio Devices</a></li>
+          </ul>
+        </li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="log-in.html">Account</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="log-in.html">Account</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to TechNest</h1>
+    <p>Your one-stop shop for the latest and greatest tech accessories.</p>
+    <button>Explore Now</button>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="featured-categories">
+    <h2>Shop by Category</h2>
+    <div class="categories-grid">
+      <div class="category-card">
+        <img src="src\phone-accessories.png" alt="Phone Accessories">
+        <h3>Phone Accessories</h3>
+        <p>Cases, chargers, and more.</p>
+      </div>
+      <div class="category-card">
+        <img src="src\laptop-accessories.png" alt="Laptop Accessories">
+        <h3>Laptop Accessories</h3>
+        <p>Bags, stands, and adapters.</p>
+      </div>
+      <div class="category-card">
+        <img src="src\audio-devices.png" alt="Audio Devices">
+        <h3>Audio Devices</h3>
+        <p>Headphones, speakers, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deals of the Day -->
+  <section class="deals">
+    <h2>Deals of the Day</h2>
+    <div class="deals-grid">
+      <div class="product-card" data-category="phone-accessories">
+        <img src="src\laptop-sleeve-1.png" alt="Wireless Charger" loading="lazy">
+        <h3>Wireless Charger</h3>
+        <p class="price">$19.99 <span class="original-price">$29.99</span></p>
+       <button class="add-button">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="laptop-accessories">
+        <img src="src\laptop-sleeve-1.png" alt="Laptop Sleeve" loading="lazy">
+        <h3>Protective Laptop Sleeve</h3>
+        <p class="price">$24.99 <span class="original-price">$39.99</span></p>
+        <button class="add-button">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="audio-devices">
+        <img src="src\laptop-sleeve-1.png" alt="Bluetooth Speaker" loading="lazy">
+        <h3>Bluetooth Speaker</h3>
+        <p class="price">$49.99 <span class="original-price">$69.99</span></p>
+        <button class="add-button">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recently Viewed -->
+  <section class="recently-viewed">
+    <h2>Recently Viewed</h2>
+    <div class="recently-viewed-grid"></div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p>"Great products and fast delivery! Highly recommend TechNest."</p>
+        <p class="review-author">- Jane Doe</p>
+      </div>
+      <div class="review-card">
+        <p>"Amazing deals and excellent customer service. Will shop again!"</p>
+        <p class="review-author">- John Smith</p>
+      </div>
+      <div class="review-card">
+        <p>"The quality of the products is top-notch. Very satisfied!"</p>
+        <p class="review-author">- Emily Johnson</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest updates on deals, new arrivals, and more.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>TechNest is your one-stop shop for the latest tech accessories.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 TechNest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">↑</button>
+
+  <!-- Cart Notification -->
+  <div id="cart-notification">Added to Cart!</div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script src="script.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>
