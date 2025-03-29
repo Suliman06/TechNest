@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - TechNest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>TechNest</h1>
+        <nav class="nav-wrapper">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="shop-item">
+                    <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+                    <ul class="shop-dropdown">
+                        <li><a href="#">Phone Accessories</a></li>
+                        <li><a href="#">Laptop Accessories</a></li>
+                        <li><a href="#">Audio Devices</a></li>
+                    </ul>
+                </li>
+                <li><a href="cart.html">Cart <i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="login.html">Account <i class="fas fa-user"></i></a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart-section">
+        <h2>Your Cart</h2>
+        <div class="cart-container" id="cart-container">
+
+        </div>
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: $<span id="total-price">0.00</span></p>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>TechNest is your one-stop shop for the latest tech accessories.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TechNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

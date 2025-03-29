@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechNest - Your Tech Accessories Hub</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+  <title>Contact Us - TechNest</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
 </head>
+
 <body>
   <header>
     <h1>TechNest</h1>
     <nav class="nav-wrapper">
       <div class="search-bar">
         <input type="text" placeholder="Search for products...">
+        <button><i class="fas fa-search"></i></button>
       </div>
       <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
       <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li class="shop-item">
-          <a href="#">Shop</a>
+          <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
           <ul class="shop-dropdown">
             <li><a href="#">Phone Accessories</a></li>
             <li><a href="#">Laptop Accessories</a></li>
             <li><a href="#">Audio Devices</a></li>
           </ul>
         </li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="log-in.html">Account</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-      <ul class="dropdown-menu" id="dropdown-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="log-in.html">Account</a></li>
+        <li><a href="cart.html">Cart <i class="fas fa-shopping-cart"></i></a></li>
+        <li><a href="login.html">Account <i class="fas fa-user"></i></a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
@@ -42,8 +40,10 @@
 
   <!-- Contact Section -->
   <section class="contact-section">
-    <h2>Contact Us</h2>
-    <p>We'd love to hear from you! Reach out to us for any inquiries or feedback.</p>
+    <div class="contact-header">
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you! Reach out to us for any inquiries or feedback.</p>
+    </div>
 
     <div class="contact-container">
       <!-- Contact Form -->
@@ -61,26 +61,32 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
           </div>
-          <button type="submit" onclick="showNotification('Message sent successfully!'); return false;">Send Message</button>
+          <button type="submit" onclick="showNotification('Message sent successfully!'); return false;">Send
+            Message</button>
         </form>
       </div>
 
       <!-- Contact Information -->
       <div class="contact-info">
         <h3>Our Office</h3>
-        <p><strong>Address:</strong> Block D, Triq Giorgio Mitrovich, Pembroke PBK 1014</p>
-        <p><strong>Phone:</strong> +356 9999-9999</p>
-        <p><strong>Email:</strong> info@technest.com</p>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Block D, Triq Giorgio Mitrovich, Pembroke PBK 1014</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <p>+356 9999-9999</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p>info@technest.com</p>
+        </div>
 
         <!-- Map -->
         <div class="map">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.85983997971!2d14.4761486!3d35.925930599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e4561435a0f4b%3A0x3c0bed8e64806d6f!2sSTC%20Higher%20Education!5e0!3m2!1sen!2smt!4v1740504161905!5m2!1sen!2smt" 
-            width="100%"
-            height="300"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.85983997971!2d14.4761486!3d35.925930599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e4561435a0f4b%3A0x3c0bed8e64806d6f!2sSTC%20Higher%20Education!5e0!3m2!1sen!2smt!4v1740504161905!5m2!1sen!2smt"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
         </div>
       </div>
@@ -113,22 +119,15 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2023 TechNest. All rights reserved.</p>
+      <p>&copy; 2025 TechNest. All rights reserved.</p>
     </div>
   </footer>
 
   <!-- Back to Top Button -->
   <button id="back-to-top" title="Go to top">↑</button>
-
-  <!-- Cart Notification -->
-  <div id="cart-notification">Added to Cart!</div>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
   </div>
 
-  <script src="script.js"></script> <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
 </body>
+
 </html>

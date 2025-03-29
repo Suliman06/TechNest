@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - TechNest</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
+</head>
+
+<body>
+  <header>
+    <h1>TechNest</h1>
+    <nav class="nav-wrapper">
+      <div class="search-bar">
+        <input type="text" placeholder="Search for products...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="shop-item">
+          <a href="shop.html">Shop <i class="fas fa-chevron-down"></i></a>
+          <ul class="shop-dropdown">
+            <li><a href="#laptop-accessories">Laptop Accessories</a></li>
+            <li><a href="#phone-accessories">Phone Accessories</a></li>
+            <li><a href="#audio-devices">Audio Devices</a></li>
+          </ul>
+        </li>
+        <li><a href="cart.html">Cart <i class="fas fa-shopping-cart"></i></a></li>
+        <li><a href="log-in.html">Account <i class="fas fa-user"></i></a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="shop-section">
+    <h2>Shop</h2>
+    <div class="shop-container">
+      <!-- Filters Column -->
+      <div class="filters-column">
+        <h3>Filters</h3>
+        <div class="filters">
+          <!-- Category Filter -->
+          <div class="filter-group">
+            <label for="category-filter">Category:</label>
+            <select id="category-filter">
+              <option value="all">All</option>
+              <option value="laptop-accessories">Laptop Accessories</option>
+              <option value="phone-accessories">Phone Accessories</option>
+              <option value="audio-devices">Audio Devices</option>
+            </select>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div class="filter-group">
+            <label for="price-range">Price Range:</label>
+            <select id="price-range">
+              <option value="all">All</option>
+              <option value="0-50">$0 - $50</option>
+              <option value="50-100">$50 - $100</option>
+              <option value="100-150">$100 - $150</option>
+              <option value="150+">$150+</option>
+            </select>
+          </div>
+
+          <!-- Rating Filter -->
+          <div class="filter-group">
+            <label for="rating-filter">Rating:</label>
+            <select id="rating-filter">
+              <option value="all">All</option>
+              <option value="4+">4 Stars & Above</option>
+              <option value="3+">3 Stars & Above</option>
+              <option value="2+">2 Stars & Above</option>
+              <option value="1+">1 Star & Above</option>
+            </select>
+          </div>
+
+          <!-- Brand Filter -->
+          <div class="filter-group">
+            <label for="brand-filter">Brand:</label>
+            <select id="brand-filter">
+              <option value="all">All</option>
+              <option value="apple">Apple</option>
+              <option value="samsung">Samsung</option>
+              <option value="sony">Sony</option>
+              <option value="logitech">Logitech</option>
+            </select>
+          </div>
+
+          <!-- Sort by Price -->
+          <div class="filter-group">
+            <label for="sort-price">Sort by Price:</label>
+            <select id="sort-price">
+              <option value="default">Default</option>
+              <option value="asc">Price: Low to High</option>
+              <option value="desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Column -->
+      <div class="products-column">
+        <div class="products-grid" id="products-grid">
+          <div class="product-card" data-category="laptop-accessories" data-price="29.99" data-rating="4.5"
+            data-brand="logitech">
+            <img src="src/wireless-mouse.png" alt="Wireless Mouse">
+            <h3>Wireless Mouse</h3>
+            <p class="price">$29.99</p>
+            <p class="rating">★★★★☆ (4.5)</p>
+            <p class="brand">Logitech</p>
+            <button class="add-button" data-id="1" data-name="Wireless Mouse" data-price="29.99"
+              data-image="src/wireless-mouse.png">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card" data-category="laptop-accessories" data-price="49.99" data-rating="4.0"
+            data-brand="apple">
+            <img src="src/laptop-stand.png" alt="Laptop Stand">
+            <h3>Laptop Stand</h3>
+            <p class="price">$49.99</p>
+            <p class="rating">★★★★☆ (4.0)</p>
+            <p class="brand">Apple</p>
+            <button class="add-button" data-id="2" data-name="Laptop Stand" data-price="49.99"
+              data-image="src/laptop-stand.png">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card" data-category="laptop-accessories" data-price="39.99" data-rating="3.5"
+            data-brand="sony">
+            <img src="src/usb-c-hub.png" alt="USB-C Hub">
+            <h3>USB-C Hub</h3>
+            <p class="price">$39.99</p>
+            <p class="rating">★★★☆☆ (3.5)</p>
+            <p class="brand">Sony</p>
+            <button class="add-button" data-id="3" data-name="USB-C Hub" data-price="39.99"
+              data-image="src/usb-c-hub.png">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card" data-category="phone-accessories" data-price="19.99" data-rating="4.5"
+            data-brand="samsung">
+            <img src="src/phone-case.png" alt="Phone Case">
+            <h3>Phone Case</h3>
+            <p class="price">$19.99</p>
+            <p class="rating">★★★★☆ (4.5)</p>
+            <p class="brand">GentCreate</p>
+            <button class="add-button" data-id="4" data-name="Phone Case" data-price="19.99"
+              data-image="src/phone-case.png">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card" data-category="phone-accessories" data-price="34.99" data-rating="4.0"
+            data-brand="apple">
+            <img src="src/wireless-charger.png" alt="Wireless Charger">
+            <h3>Wireless Charger</h3>
+            <p class="price">$34.99</p>
+            <p class="rating">★★★★☆ (4.0)</p>
+            <p class="brand">Apple</p>
+            <button class="add-button" data-id="5" data-name="Wireless Charger" data-price="34.99"
+              data-image="src/wireless-charger.png">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card" data-category="phone-accessories" data-price="9.99" data-rating="3.0"
+            data-brand="logitech">
+            <img src="src/screen-protector.png" alt="Screen Protector">
+            <h3>Screen Protector</h3>
+            <p class="price">$9.99</p>
+            <p class="rating">★★★☆☆ (3.0)</p>
+            <p class="brand">Logitech</p>
+            <button class="add-button" data-id="6" data-name="Screen Protector" data-price="9.99"
+              data-image="src/screen-protector.png">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card" data-category="audio-devices" data-price="79.99" data-rating="4.5"
+            data-brand="sony">
+            <img src="src/bluetooth-earbuds.png" alt="Bluetooth Earbuds">
+            <h3>Bluetooth Earbuds</h3>
+            <p class="price">$79.99</p>
+            <p class="rating">★★★★☆ (4.5)</p>
+            <p class="brand">Sony</p>
+            <button class="add-button" data-id="7" data-name="Bluetooth Earbuds" data-price="79.99"
+              data-image="src/bluetooth-earbuds.png">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card" data-category="audio-devices" data-price="59.99" data-rating="4.0"
+            data-brand="samsung">
+            <img src="src/jbl-speaker.png" alt="Portable Speaker">
+            <h3>Portable Speaker</h3>
+            <p class="price">$59.99</p>
+            <p class="rating">★★★★☆ (4.0)</p>
+            <p class="brand">JBL</p>
+            <button class="add-button" data-id="8" data-name="Portable Speaker" data-price="59.99"
+              data-image="src/jbl-speaker.png">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card" data-category="audio-devices" data-price="149.99" data-rating="5.0"
+            data-brand="apple">
+            <img src="src/airpods-pro.png" alt="Noise-Cancelling Headphones">
+            <h3>Noise-Cancelling Headphones</h3>
+            <p class="price">$149.99</p>
+            <p class="rating">★★★★★ (5.0)</p>
+            <p class="brand">Apple</p>
+            <button class="add-button" data-id="9" data-name="Noise-Cancelling Headphones" data-price="149.99"
+              data-image="src/airpods-pro.png">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="product-card" data-category="audio-devices" data-price="99.99" data-rating="4.5"
+            data-brand="logitech">
+            <img src="src/gaming-headset.png" alt="Gaming Headset">
+            <h3>Gaming Headset</h3>
+            <p class="price">$99.99</p>
+            <p class="rating">★★★★☆ (4.5)</p>
+            <p class="brand">Logitech</p>
+            <button class="add-button" data-id="10" data-name="Gaming Headset" data-price="99.99"
+              data-image="src/gaming-headset.png">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>TechNest is your one-stop shop for the latest tech accessories.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 TechNest. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">↑</button>
+
+  <!-- Cart Notification -->
+  <div id="cart-notification" class="cart-notification">
+    <span id="cart-notification-message">Added to Cart!</span>
+    <button id="cart-notification-checkout">Checkout</button>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
